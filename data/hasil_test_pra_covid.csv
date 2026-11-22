@@ -1,0 +1,13 @@
+model,kategori,MAE,RMSE,MAPE%,R2
+LightGBM (ML),ML,36.265,51.215,2.879,0.927
+Ridge (ML linear),ML,42.005,59.246,3.394,0.902
+Dynamic Regression + ARMA,Klasik,42.766,60.851,3.362,0.897
+LightGBM eksogen-saja (tanpa lag),ML (ablation),46.443,62.56,3.725,0.891
+GRU scratch - semua data,DL (non-transfer),66.032,90.876,5.274,0.769
+GRU transfer - freeze encoder,DL (transfer),68.047,92.143,5.461,0.763
+GRU transfer - full fine-tune,DL (transfer),68.554,92.59,5.501,0.76
+GRU source-only (pre-train saja),DL (transfer tanpa adaptasi),69.196,94.082,5.552,0.753
+GRU scratch - 1 th terakhir train,DL (non-transfer),71.853,97.367,5.763,0.735
+Naive-168 (minggu lalu),Baseline,73.091,102.062,5.854,0.709
+Rata-rata 7 hari (jam sama),Baseline,78.059,105.218,6.233,0.691
+Naive-24 (kemarin),Baseline,81.515,121.379,6.39,0.588
